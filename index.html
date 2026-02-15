@@ -15,34 +15,6 @@
       <link href="https://cdn.prod.website-files.com/67cb34bca7363cb52e10cc8c/6815417b5b07f6267cf59afd_Favicon%20(14).png   " rel="shortcut icon" type="image/x-icon"/>
       <link href="https://cdn.prod.website-files.com/img/webclip.png   " rel="apple-touch-icon"/>
       <style>
-   @media (max-width: 991px) {
-  .navbar-button {
-    flex: 0 0 auto !important;
-  }
-}
-
-         /* Fix navbar CTA on mobile */
-@media (max-width: 991px) {
-  .navbar-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar-button {
-    width: auto !important;
-    display: flex;
-    justify-content: center;
-  }
-
-  .navbar-button .button.in-navbar {
-    width: auto !important;
-    max-width: none !important;
-    display: inline-flex;
-    padding: 8px 18px !important;
-  }
-}
- 
          :root {
          --accent-purple: #B63DCC;
          --accent-glow: #8C37B3;
@@ -287,12 +259,66 @@
          max-width: 1400px !important;
          }
          }
-         /* Mobile adjustments */
+         /* Mobile adjustments - FIXED BUTTON ISSUE HERE */
          @media (max-width: 991px) {
          .hero-video {
          border-radius: 12px;
          }
+         
+         /* Fix the button width on mobile */
+         .actual-wrapper-button {
+         display: flex !important;
+         justify-content: center !important;
+         width: 100% !important;
          }
+         
+         .actual-wrapper-button .button_actual_wrapper {
+         display: inline-block !important;
+         width: auto !important;
+         max-width: 280px !important;
+         }
+         
+         .actual-wrapper-button .glowing-wrapper {
+         width: auto !important;
+         display: inline-block !important;
+         }
+         
+         .actual-wrapper-button .button {
+         white-space: nowrap !important;
+         width: auto !important;
+         min-width: 200px !important;
+         max-width: 280px !important;
+         }
+         
+         /* Fix navbar button on mobile */
+         .navbar-button .button_actual_wrapper {
+         max-width: none !important;
+         }
+         
+         .navbar-button .button {
+         min-width: auto !important;
+         }
+         
+         /* Ensure CTA button is centered and properly sized */
+         .section.cta .actual-wrapper-button .button_actual_wrapper {
+         max-width: 280px !important;
+         margin: 0 auto !important;
+         }
+         }
+         
+         /* Small mobile devices */
+         @media (max-width: 480px) {
+         .actual-wrapper-button .button_actual_wrapper {
+         max-width: 240px !important;
+         }
+         
+         .actual-wrapper-button .button {
+         min-width: 180px !important;
+         max-width: 240px !important;
+         font-size: 16px !important;
+         }
+         }
+         
          /* Ensure CTA section stays properly centered */
          .section.cta {
          width: 100%;
