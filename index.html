@@ -15,6 +15,29 @@
       <link href="https://cdn.prod.website-files.com/67cb34bca7363cb52e10cc8c/6815417b5b07f6267cf59afd_Favicon%20(14).png   " rel="shortcut icon" type="image/x-icon"/>
       <link href="https://cdn.prod.website-files.com/img/webclip.png   " rel="apple-touch-icon"/>
       <style>
+
+         /* Fix navbar CTA on mobile */
+@media (max-width: 991px) {
+  .navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-button {
+    width: auto !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-button .button.in-navbar {
+    width: auto !important;
+    max-width: none !important;
+    display: inline-flex;
+    padding: 8px 18px !important;
+  }
+}
+ 
          :root {
          --accent-purple: #B63DCC;
          --accent-glow: #8C37B3;
